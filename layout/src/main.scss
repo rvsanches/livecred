@@ -1,0 +1,45 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+$lc-dark: #2A3342;
+$lc-gray: #D8D8D8;
+$lc-orange-dark: #FF9526;
+$lc-orange: #E4A014;
+$lc-orange-light: #F2BF26;
+
+$theme-colors: (
+    "lc-dark": $lc-dark,
+    "lc-gray": $lc-gray,
+    "lc-orange": $lc-orange,
+    "lc-orange-light": $lc-orange-light,
+    "lc-orange-dark": $lc-orange-dark
+);
+
+$link-color: $lc-orange-dark;
+$link-hover-color: darken($link-color, 15%);
+$enable-rounded: false;
+
+.bg-banner-header {
+    background-image: 
+        linear-gradient(
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.75)
+        );
+}
+
+.border-card-footer {
+    border-left: solid 4px $lc-orange-light !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-right: none !important;
+}
+
+.banner-header {
+    min-height: 350px;
+    object-fit: cover;
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
