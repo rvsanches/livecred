@@ -12,18 +12,32 @@
     <!-- Font Awesome CSS -->
     <link href="<?php bloginfo('template_url'); ?>/css/all.css" rel="stylesheet">
 
-    <title>LiveCred</title>
+    <?php wp_head(); ?>
 </head>
 
 <body>
 
 <div class="bg-lc-dark">
     <div class="container">
-        <div class="row py-4 align-items-center justify-content-center">
+        <div class="row py-4 align-items-center justify-content-center text-white">
             <div class="col-8 col-md-4 col-lg-3 mb-4 mb-md-0">
-                <img src="assets/logo-livecred-hor-pb-04.svg" class="img-fluid" alt="Logotipo LiveCred">
+
+                <?php 
+                
+                    $lc_custom_logo = get_theme_mod('custom_logo');
+                    $logo = wp_get_attachment_image_src($lc_custom_logo, 'full');
+
+                    if(has_custom_logo()) {
+                       echo '<img src="' . esc_url($logo[0]) . '" class="img-fluid" alt="Logotipo LiveCred">'; 
+                    } else {
+                        echo '<h1 class="m-0">' . get_bloginfo('name'). '</h1>';
+                        echo '<p class="m-0">' . get_bloginfo('description'). '</p>';
+                    }
+
+                ?>
+
             </div>
-            <div class="col-12 col-md-8 col-lg-9 text-center text-md-right text-white lead">
+            <div class="col-12 col-md-8 col-lg-9 text-center text-md-right lead">
                 <ul class="list-inline mb-0">
                     <li class="list-inline-item mr-3">
                         <i class="fas fa-phone"></i>

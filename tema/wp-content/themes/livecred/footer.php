@@ -22,7 +22,21 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-xl-3 col-lg-4 col-md-6 col-8">
-                <img src="assets/logo-livecred-hor-pb-04.svg" class="img-fluid my-5" alt="Logotipo LiveCred">
+
+                <?php 
+                    
+                    $lc_custom_logo = get_theme_mod('custom_logo');
+                    $logo = wp_get_attachment_image_src($lc_custom_logo, 'full');
+
+                    if(has_custom_logo()) {
+                    echo '<img src="' . esc_url($logo[0]) . '" class="img-fluid my-5" alt="Logotipo LiveCred">'; 
+                    } else {
+                        echo '<h1 class="m-0">' . get_bloginfo('name'). '</h1>';
+                        echo '<p class="m-0">' . get_bloginfo('description'). '</p>';
+                    }
+
+                ?>
+                
             </div>
         </div>
         <div class="row">
@@ -45,6 +59,8 @@
         </div>
     </div>
 </div> 
+
+<?php wp_footer(); ?>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
