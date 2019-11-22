@@ -39,6 +39,23 @@
                 
             </div>
         </div>
+
+        <div class="row">
+
+                <?php
+                    wp_nav_menu( array(
+                        'theme_location'    => 'rodape',
+                        'depth'             => 2,
+                        'container'         => 'div',
+                        'container_class'   => 'col-12 mb-5',
+                        'menu_class'        => 'nav justify-content-center',
+                        'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                        'walker'            => new WP_Bootstrap_Navwalker(),
+                    ) );
+                ?>
+
+        </div>
+
         <div class="row">
             <div class="col text-center text-white">
                 <ul class="list-inline mb-0">

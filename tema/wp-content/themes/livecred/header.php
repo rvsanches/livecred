@@ -63,30 +63,26 @@
     </div>
 </div>
 
-<nav class="navbar navbar-expand-md navbar-light bg-lc-gray">
-    <div class="container">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
-                aria-controls="navbarHeader" aria-expanded="false" aria-label="Expandir menu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarHeader">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Início</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Sobre</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Soluções</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Novidades</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Contatos</a>
-                </li>
-            </ul>
-        </div>
+<nav class="navbar navbar-expand-md navbar-light bg-lc-gray" role="navigation">
+  <div class="container">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
+            aria-controls="navbarHeader" aria-expanded="false" aria-label="Expandir menu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+        <?php
+            wp_nav_menu( array(
+                'theme_location'    => 'topo',
+                'depth'             => 2,
+                'container'         => 'div',
+                'container_class'   => 'collapse navbar-collapse',
+                'container_id'      => 'navbarHeader',
+                'menu_class'        => 'nav navbar-nav mx-auto',
+                'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                'walker'            => new WP_Bootstrap_Navwalker(),
+            ) );
+        ?>
+
     </div>
 </nav>
