@@ -78,59 +78,23 @@
 
             <h5 class="border-bottom pb-2"><i class="fas fa-newspaper"></i> Novidades</h5>
 
-            <div class="row mt-4">
-                <div class="col-md-6 col-sm-12">
-                    <img src="assets/news-1.png" class="img-fluid" alt="Imagem 1">
-                </div>
-                <div class="col-md-6 col-sm-12 mt-3 mt-md-0">
-                    <p>
-                        <span class="badge badge-lc-gray">Seu dinheiro</span>
-                    </p>
-                    <h5>
-                        <a href="#">Poupança “antiga” rende 6,17% e bate outros investimentos</a>
-                    </h5>
-                    <p class="mb-0">A poupança "velha" vale para quem mantém o dinheiro aplicado desde antes de 3 de
-                        maio...</p>
-                    <p class="text-muted mt-3"><i class="far fa-clock"></i> <small>Publicado em: 14/10/19</small>
-                    </p>
-                </div>
+            <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
+
+                    <?php get_template_part('content', get_post_format()); ?>
+                
+                <?php endwhile; ?>
+            
+            <?php else : ?>
+
+                <p class="lead">Nenhuma publicação encontrada</p>
+
+            <?php endif; ?>
+
+            <div class="mt-4 mb-5 d-flex justify-content-between">
+                <?php next_posts_link('Mais antigos'); ?>
+                <?php previous_posts_link('Mais novos'); ?>
             </div>
 
-            <div class="row mt-4">
-                <div class="col-md-6 col-sm-12">
-                    <img src="assets/news-1.png" class="img-fluid" alt="Imagem 1">
-                </div>
-                <div class="col-md-6 col-sm-12 mt-3 mt-md-0">
-                    <p>
-                        <span class="badge badge-lc-gray">Seu dinheiro</span>
-                    </p>
-                    <h5>
-                        <a href="#">Poupança “antiga” rende 6,17% e bate outros investimentos</a>
-                    </h5>
-                    <p class="mb-0">A poupança "velha" vale para quem mantém o dinheiro aplicado desde antes de 3 de
-                        maio...</p>
-                    <p class="text-muted mt-3"><i class="far fa-clock"></i> <small>Publicado em: 14/10/19</small>
-                    </p>
-                </div>
-            </div>
-
-            <div class="row mt-4">
-                <div class="col-md-6 col-sm-12">
-                    <img src="assets/news-1.png" class="img-fluid" alt="Imagem 1">
-                </div>
-                <div class="col-md-6 col-sm-12 mt-3 mt-md-0">
-                    <p>
-                        <span class="badge badge-lc-gray">Seu dinheiro</span>
-                    </p>
-                    <h5>
-                        <a href="#">Poupança “antiga” rende 6,17% e bate outros investimentos</a>
-                    </h5>
-                    <p class="mb-0">A poupança "velha" vale para quem mantém o dinheiro aplicado desde antes de 3 de
-                        maio...</p>
-                    <p class="text-muted mt-3"><i class="far fa-clock"></i> <small>Publicado em: 14/10/19</small>
-                    </p>
-                </div>
-            </div>
         </div>
 
         <div class="col-lg-4 d-none d-lg-block">
