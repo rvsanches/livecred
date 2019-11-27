@@ -20,7 +20,26 @@ if (!function_exists('wp_render_title_tag')) {
     add_action('wp_head', 'lc_render_title');
 }
 
+// Registra os menus no tema
 register_nav_menus( array(
     'topo'   =>  __('Menu no topo', 'livecred'),
     'rodape' =>  __('Menu no rodapé', 'livecred')
 ));
+
+// Definir o tamanho das miniaturas
+add_theme_support( 'post-thumbnails' );
+set_post_thumbnail_size( 1280, 720, true );
+
+
+// Definir o tamanho do resumo
+add_filter( 'excerpt_length', function($length) {
+    return 12;
+});
+
+// Definir o estilo da paginação
+add_filter('next_posts_link_attributes', 'posts_link_attibutes');
+add_filter('previous_posts_link_attributes', 'posts_link_attibutes');
+
+function posts_link_attibutes() {
+    return 'class="btn btn-lc-orange"';
+}
