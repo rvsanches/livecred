@@ -37,9 +37,19 @@ add_filter( 'excerpt_length', function($length) {
 });
 
 // Definir o estilo da paginação
-add_filter('next_posts_link_attributes', 'posts_link_attibutes');
-add_filter('previous_posts_link_attributes', 'posts_link_attibutes');
+add_filter('next_posts_link_attributes', 'posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes');
 
-function posts_link_attibutes() {
+function posts_link_attributes() {
     return 'class="btn btn-lc-orange"';
 }
+
+register_sidebar(
+    array(
+        'name' => 'Busca',
+        'id' => 'busca',
+        'before_widget' => '<div class="card bg-lc-gray border-0 mb-4"><div class="card-body">',
+        'after_widget' => '</div></div>',
+        'before_title' => '<h5>',
+        'afte_title' => '</h5>'
+));
