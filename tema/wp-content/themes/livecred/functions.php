@@ -51,5 +51,15 @@ register_sidebar(
         'before_widget' => '<div class="card bg-lc-gray border-0 mb-4"><div class="card-body">',
         'after_widget' => '</div></div>',
         'before_title' => '<h5>',
-        'afte_title' => '</h5>'
+        'after_title' => '</h5>'
+));
+
+register_sidebar(
+    array(
+        'name' => 'Cards',
+        'id' => 'cards',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '',
+        'after_title' => ''
 ));

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="573e626d-1dff-43bb-83c5-186b5300a372" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/themes/livecred/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/themes/livecred/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/livecred/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/themes/livecred/sidebar.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1W03MMqMFS37xN8i3px3d4E1o8f" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="573e626d-1dff-43bb-83c5-186b5300a372" name="Default Changelist" comment="" />
+      <created>1578272639590</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578272639590</updated>
+      <workItem from="1578272652438" duration="6634000" />
+      <workItem from="1578359778716" duration="778000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2718" y="450" key="#WordPress" timestamp="1578272764453">
+      <screen x="1920" y="3" width="1920" height="1040" />
+    </state>
+    <state x="2718" y="450" key="#WordPress/0.0.1920.1040/1920.3.1920.1040@1920.3.1920.1040" timestamp="1578272764453" />
+    <state x="2660" y="266" key="FileChooserDialogImpl" timestamp="1578272698415">
+      <screen x="1920" y="3" width="1920" height="1040" />
+    </state>
+    <state x="2660" y="266" key="FileChooserDialogImpl/0.0.1920.1040/1920.3.1920.1040@1920.3.1920.1040" timestamp="1578272698415" />
+    <state x="2714" y="447" key="NewPhpFileDialog" timestamp="1578272831858">
+      <screen x="1920" y="3" width="1920" height="1040" />
+    </state>
+    <state x="2714" y="447" key="NewPhpFileDialog/0.0.1920.1040/1920.3.1920.1040@1920.3.1920.1040" timestamp="1578272831858" />
+    <state x="2576" y="348" key="com.intellij.ide.util.TipDialog" timestamp="1578359780355">
+      <screen x="1920" y="3" width="1920" height="1040" />
+    </state>
+    <state x="2576" y="348" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.3.1920.1040@1920.3.1920.1040" timestamp="1578359780355" />
+    <state x="2536" y="242" key="run.anything.popup" timestamp="1578276504594">
+      <screen x="1920" y="3" width="1920" height="1040" />
+    </state>
+    <state x="2536" y="242" key="run.anything.popup/0.0.1920.1040/1920.3.1920.1040@1920.3.1920.1040" timestamp="1578276504594" />
+  </component>
+  <component name="WordPressConfiguration" enabled="true">
+    <wordpressPath>D:\Dev\livecred\tema</wordpressPath>
+  </component>
+</project>
