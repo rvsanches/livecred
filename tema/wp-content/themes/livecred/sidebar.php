@@ -4,29 +4,9 @@
                 dynamic_sidebar('Busca');
             ?>
 
-            <div class="card text-white mb-4">
-                <img src="assets/news-1.png" class="card-img" alt="Descrição da imagem">
-                <div class="card-img-overlay bg-banner-header p-0 m-0 row">
-                    <div class="col align-self-end">
-                        <h5 class="mb-0">Crédito pessoal</h5>
-                        <p>
-                            Desfrute dos benefícios que você e sua família merecem
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card text-white mb-4">
-                <img src="assets/news-1.png" class="card-img" alt="Descrição da imagem">
-                <div class="card-img-overlay bg-banner-header p-0 m-0 row">
-                    <div class="col align-self-end">
-                        <h5 class="mb-0">Empréstimo consignado</h5>
-                        <p>
-                            Desfrute dos benefícios que você e sua família merecem
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <?php // Cards
+                dynamic_sidebar('Cards');
+            ?>
 
             <div class="card bg-lc-gray text-center border-0">
                 <div class="card-body">
