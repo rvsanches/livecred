@@ -105,42 +105,40 @@
 <div class="bg-lc-gray py-5 mt-5">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-sm-12 mb-4 mb-md-0">
-                <div class="card border-card-footer">
-                    <div class="card-body">
-                        <p>
-                            <em>
-                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Aliquam cum cupiditate delectus, dignissimos dolorem ea eius, fugiat fugit incidunt inventore
-                                ipsum non perferendis placeat reprehenderit rerum ullam, voluptatem? Cumque, nulla.</span>
-                            </em>
-                        </p>
-                        <p class="mb-0">
-                            <strong>
-                                <i class="fas fa-user"></i> João da Silva - São Paulo SP
-                            </strong>
-                        </p>
+
+            <?php
+                $args = array(
+                    'post_type' => 'depoimentos',
+                    'posts_per_page' => 2
+                );
+                $the_query = new WP_Query( $args );
+            ?>
+
+            <?php if ( $the_query->have_posts() ) : 
+                while ( $the_query->have_posts() ) :
+                $the_query->the_post(); ?>
+
+                    <div class="col-md-6 col-sm-12 mb-4 mb-md-0">
+                        <div class="card border-card-footer">
+                            <div class="card-body">
+                                <?php the_content(); ?>
+                            </div>
+                        </div>
                     </div>
+
+                <?php endwhile; ?>
+            <?php else : ?>
+
+                <div class="col-12">
+                
+                    <p class="lead">
+                        Nenhum depoimento encontrado
+                    </p>
+
                 </div>
-            </div>
-            <div class="col-md-6 col-sm-12">
-                <div class="card border-card-footer">
-                    <div class="card-body">
-                        <p>
-                            <em>
-                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Aliquam cum cupiditate delectus, dignissimos dolorem ea eius, fugiat fugit incidunt inventore
-                                ipsum non perferendis placeat reprehenderit rerum ullam, voluptatem? Cumque, nulla.</span>
-                            </em>
-                        </p>
-                        <p class="mb-0">
-                            <strong>
-                                <i class="fas fa-user"></i> João da Silva - São Paulo SP
-                            </strong>
-                        </p>
-                    </div>
-                </div>
-            </div>
+
+            <?php endif; ?>
+      
         </div>
     </div>
 </div>
