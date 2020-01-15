@@ -63,3 +63,47 @@ register_sidebar(
         'before_title' => '',
         'after_title' => ''
 ));
+
+function lc_cpt() {
+
+    // Informar os textos da interface
+    $labels = array(
+        'name'              => _x('Depoimentos', 'Depoimentos dos clientes', 'livecred'),
+        'singular_name'     => _x('Depoimento', 'Depoimento do cliente', 'livecred'),
+        'menu_name'         => __('Depoimentos', 'livecred'),
+        'all_items'         => __('Todos os depoimentos', 'livecred'),
+        'view_item'         => __('Ver depoimento', 'livecred'),
+        'add_new_item'      => __('Adicionar depoimento', 'livecred'),
+        'add_new'           => __('Adicionar novo', 'livecred'),
+        'edit_item'         => __('Eitar depoimento', 'livecred'),
+        'update_item'       => __('Atualizar depoimento', 'livecred'),
+        'search_items'      => __('Buscar depoimento', 'livecred'),
+        'not_found'         => __('Não encontrado', 'livecred'),
+        'not_fund_in_trash' => __('Não encontrado no lixo', 'livecred')
+    );
+
+    // Informar as opções
+    $args = array(
+        'label'               => __('depoimentos', 'livecred'),
+        'description'         => __('Depoimentos dos clientes', 'livecred'),
+        'labels'              => $labels,
+        'supports'            => array('title', 'editor'),
+        'hierarchical'        => false,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 5,
+        'menu_icon'           => 'dashicons-format-aside',
+        'can_export'          => true,
+        'has_archive'         => true,
+        'exclude_from_search' => true,
+        'publicy_queryable'   => true,
+        'capability_type'     => 'post'
+    );
+
+    register_post_type('depoimentos', $args);
+}
+
+add_action('init', 'lc_cpt', 0);
